@@ -1,0 +1,32 @@
+/*
+향상된 for 문
+for (타입  변수명  :  배열변수명)
+
+- toCharArray() : char 배열생성 
+- to~~~ :생성
+- is~~~ : T/F 판단
+
+*/
+
+import java.util.Scanner;
+
+
+public class Main {
+
+	public String solution(String str) {		
+		String answer ="";		
+		for(char x : str.toCharArray()) {
+			if(Character.isLowerCase(x)) answer+=Character.toUpperCase(x);
+			else answer+=Character.toLowerCase(x);
+		}
+		return answer;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Main T = new Main();
+		Scanner kb = new Scanner(System.in);
+		String str = kb.next();
+		System.out.println(T.solution(str));	
+	}
+}
