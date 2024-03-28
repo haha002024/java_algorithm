@@ -1,0 +1,17 @@
+class Solution{
+
+  public String solution(String phone_number) {
+        String answer ="";
+        char[] c_arr = phone_number.toCharArray();
+
+        for(int i = 0; i < c_arr.length; i++){
+                if(i >= (c_arr.length-4)){
+                    answer += c_arr[i];
+                }else answer += "*";
+        }
+
+        return answer;
+}
+
+// 전화번호 마지막 4자리 별찍기
+// 문자열을 문자배열에 넣는 함수 => toCharArray()
